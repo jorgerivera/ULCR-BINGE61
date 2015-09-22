@@ -1,0 +1,170 @@
+\documentclass[12pt,letterpaper]{IEEEtran}
+\usepackage[utf8]{inputenc}
+\usepackage[spanish]{babel}
+\usepackage{enumitem}
+
+\title{Laboratorio 2: Máquinas de estados}
+\author{Prof. Ing. Jorge Rivera G.}
+\date{\today}
+
+
+\newcommand\MYhyperrefoptions{bookmarks=true,bookmarksnumbered=true,
+pdfpagemode={UseOutlines},plainpages=false,pdfpagelabels=true,
+colorlinks=true,linkcolor={black},citecolor={black},
+urlcolor={black}}
+
+\usepackage[\MYhyperrefoptions]{hyperref}
+
+\begin{document}
+\hypersetup{pdftitle={Laboratorio 2: Máquinas de estados},
+pdfsubject={BINGE-61 Microcontroladores},
+pdfauthor={Ing. Jorge Rivera},
+pdfkeywords={arduino, sistemas digitales}}
+
+\renewcommand{\leftmark}{UNIVERSIDAD LATINA DE COSTA RICA -- BINGE-61 MICROCONTROLADORES}
+
+\maketitle
+
+
+\begin{abstract}
+Esta es una práctica para demostrar las ventajas del uso de máquinas de estados en Arduino. 
+\end{abstract}
+%\chapter{capitulo}
+\section{Descripción}
+
+Esta práctica será realizada en el laboratorio, con algún trabajo adicional extra-clase. Los estudiantes se organizarán en parejas y realizarán un proyecto utilizando la tarjeta Arduino para resolver una pequeña tarea. Cada pareja resolverá un problema y presentará dos soluciones: una usando máquinas de estados y una sin usarlas.
+
+
+\section{Introducción}
+
+El profesor dará una breve charla sobre el uso de las funciones que serán utilizadas.
+
+\section{Materiales}
+
+Para esta práctica se necesitarán los siguientes materiales.
+
+\begin{center}
+\begin{tabular}{c|c}\hline
+	Cant. & \hspace{2cm}Material\hspace{2cm} \\\hline\hline
+	1 	& Arduino 		\\\hline
+	1	& Protoboard 	\\\hline	
+	---	& leds			\\\hline
+	--- & interruptores		\\\hline
+	--- & potenciómetros	\\\hline
+	--- & LCD \\\hline
+	--- & sensores variados \\\hline
+	---	& Resistencias variadas \\\hline
+	--- & Cables		\\\hline
+\end{tabular}
+\end{center}
+
+\section{Requerimientos}
+
+Para la conclusión satisfactoria de este laboratorio se realizar uno de los proyectos en la siguiente lista:
+
+\begin{description}
+	\item[\textbf{ADC + Serial:}] leer el valor de un sensor de flexión con el convertidor Analógico a Digital y enviar el resultado con un mensaje por el puerto serial. Podrán utilizar dos velocidades distintas (p.ej. 9600 y 115200) para el envío y comparar los resultados.\\
+	\item[\textbf{ADC + LiquidCrystal:}] leer el valor de un potenciómetro utilizando el convertidor Analógico a Digital y mostrar el resultado en una pantalla de cristal líquido con un mensaje apropiado.\\
+	\item{\textbf{ADC + tone:}} leer el valor de un potenciómetro el convertidor Analógico a Digital y reproducir un tono con una frecuencia que sea proporcional al valor leído. \\
+	\item[\textbf{Serial + LCD:}] leer el valor de un byte transmitido y mostrarlo en la pantalla de cristal líquido con un mensaje apropiado.\\
+	\item[\textbf{Serial + tone:}] leer el valor de un byte transmitido y generar un tono con una frecuencia correspondiente al valor del byte.\\  
+
+\end{description}
+
+Cada proyecto deberá incluir además, un led que parpadeé a una frecuencia de 1Hz de forma constante.
+
+\section{Procedimiento}
+
+
+
+\subsection{Alambrado del circuito}
+
+\begin{enumerate}[resume]
+	\item El circuito se deberá alambrar usando protoboards u otros dispositivos de prototipo apropiados. El alambrado deberá mantenerse ordenado en la medida de lo posible.
+\end{enumerate}
+
+\subsection{Programación}
+
+\begin{enumerate}[resume]
+	\item Se deberá escribir una primera versión del programa en la interfaz de Arduino, sin utilizar máquinas de estados.
+	\item Se verificará el funcionamiento y el periodo del LED comparándolo con una referencia conocida.
+	\item Se deberá escribir una segunda versión del programa utilizando máquinas de estados.
+\end{enumerate}
+
+
+\subsection{Demostración}
+
+\begin{enumerate}[resume]
+	\item Se deberá explicar a los compañeros la tarea realizada y demostrar la diferencia en el comportamiento entre las implementaciones realizadas y la referencia.
+\end{enumerate}
+
+\section{Informe}
+
+El informe que se deberá presentar tendrá dos versiones: una versión impresa y una versión digital.
+
+\subsection{Informe impreso}
+
+El informe impreso constará de las siguientes partes:
+
+\begin{enumerate}
+  \item Encabezado
+  \item Resumen o abstract
+  \item Descripción del circuito
+  \item Listado de materiales
+  \item Esquemático o diagrama del circuito
+  \item Descripción del programa realizado
+  \item Conceptos aprendidos
+\end{enumerate}
+
+El informe deberá realizarse utilizando el sistema de preparación de documentos \LaTeX, utilizando el formato IEEEtran. El documento deberá ser entregado en forma impresa en la clase correspondiente y en forma digital en el Aula Virtual, incluyendo el código fuente y el resultado en PDF.  La fecha de entrega será una semana natural después de la realización de la práctica.
+
+
+Para realizar el esquemático del circuito, se deberá utilizar una herramienta apropiada. Utilice símbolos apropiados para un esquemático. No son admisibles diagramas realizados en Microsoft Paint, Adobe Photoshop u otras herramientas similares. Se sugiere utilizar Fritzing.
+
+Para presentar la descripción del programa, se deberá hacer una explicación de cómo funciona el programa. Se podrá ilustrar esta sección con recortes del programa. Los recortes del listado del programa se deberán presentar utilizando el ambiente \texttt{verbatim}, y con las tabulaciones correctas. 
+
+Los conceptos aprendidos deberán ser una lista de notas importantes que se hayan recogido durante la clase y de los conceptos que se aplicaron en la práctica. Deberá realizarse una breve explicación de cada elemento en la lista.
+
+Se castigará duramente el intento de plagio.
+
+\subsection{Versión digital}
+
+Se presentará una descripción del circuito y el código realizado en una documentación digital. Se usará el wiki ubicado en \url{https://github.com/jorgerivera/ULCR-BINGE61/wiki/Laboratorio-2}. 
+
+Se deberán incluir las secciones: descripción del circuito, materiales, esquemático y descripción del programa.
+
+\section{Evaluación}
+
+La evaluación de este práctica será con una calificación de 0 a 100, distribuida de la siguiente forma:
+
+\begin{center}
+ \begin{tabular}{p{0.35\textwidth}|c}\hline
+   Funcionamiento del circuito (de acuerdo a los requisitos indicados anteriormente) 					     & 30\% \\\hline
+   Calidad del informe	  				& 10\% \\\hline
+   Esquemático							& 10\% \\\hline
+   Listado del programa					& 10\% \\\hline
+   Conceptos aprendidos					& 15\% \\\hline
+   Descripción del circuito				& 10\% \\\hline
+   Componentes o materiales				& 5\% \\\hline
+   Versión digital						& 10\% \\\hline\hline
+   Total								& 100\% \\
+ \end{tabular}
+\end{center}
+
+La sección ``calidad del informe'' corresponde a 10 puntos que podrán obtenerse en caso de que el informe esté escrito con correcta redacción y ortografía y esté presentado de forma correcta.
+
+Este documento puede usarse como base para el informe, pero en el mismo deberán incluirse solamente las secciones especificadas anteriormente y nada más.
+
+Si por motivos justificados se requiere de más tiempo para completar el informe, esta deberá ser solicitada al profesor al menos con 24 horas de anticipación.
+
+En caso de no haber solicitado una extensión por anticipado o de haberse vencido la extensión, la máxima nota estará dada por la fórmula:
+
+\[ M(n) = 100-\frac{1.367}{10}\cdot n^{1.367} \]
+
+donde $M$ es la nota máxima y $n$ es la cantidad de horas de atraso en la entrega. La nota final será:
+
+\[ F(n) = M(n)\cdot T \]
+
+donde $T$ corresponde al porcentaje obtenido de los rubros especificados anteriormente.
+
+\end{document} 
