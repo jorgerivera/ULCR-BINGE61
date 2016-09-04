@@ -1,0 +1,168 @@
+\documentclass[12pt,letterpaper]{IEEEtran}
+\usepackage[utf8x]{inputenc}
+\usepackage[spanish]{babel}
+\usepackage{enumitem}
+
+\title{Laboratorio 1: Fundamentos de Arduino}
+\author{Prof. Ing. Jorge Rivera G.}
+\date{\today}
+
+
+\newcommand\MYhyperrefoptions{bookmarks=true,bookmarksnumbered=true,
+pdfpagemode={UseOutlines},plainpages=false,pdfpagelabels=true,
+colorlinks=true,linkcolor={black},citecolor={black},
+urlcolor={black}}
+
+\usepackage[\MYhyperrefoptions]{hyperref}
+
+\begin{document}
+\hypersetup{pdftitle={Laboratorio 1: Fundamentos de Arduino},
+pdfsubject={BINGE-61 Microcontroladores},
+pdfauthor={Ing. Jorge Rivera},
+pdfkeywords={arduino, sistemas digitales}}
+
+\renewcommand{\leftmark}{UNIVERSIDAD LATINA DE COSTA RICA -- BINGE-61 MICROCONTROLADORES}
+
+\maketitle
+
+
+\begin{abstract}
+Esta es una práctica básica para conocer los fundamentos del lenguaje y el ambiente Arduino. Se controlará el comportamiento de una serie de leds utilizando el puerto serial.
+\end{abstract}
+%\chapter{capitulo}
+\section{Descripción}
+
+Esta práctica será realizada enteramente en el laboratorio. Cada estudiante realizará un proyecto de forma individual. Creará un pequeño circuito con leds, utilizando una tarjeta Arduino.
+
+
+
+
+\section{Introducción}
+
+El profesor dará una breve charla sobre el uso de las siguientes funciones y librerías:
+\begin{itemize}
+\item  \texttt{digitalWrite()},
+\item  \texttt{digitalRead()},
+\item  \texttt{analogWrite()},
+\item  \texttt{analogRead()},
+\item  \texttt{Serial}
+\item  \texttt{delay()}.
+
+\end{itemize}
+\section{Materiales}
+
+Para esta práctica se necesitarán los siguientes materiales.
+
+\begin{center}
+\begin{tabular}{c|c}\hline
+	Cant. & \hspace{2cm}Material\hspace{2cm} \\\hline\hline
+	1 	& Arduino 		\\\hline
+	1	& Protoboard 	\\\hline	
+	5	& leds			\\\hline
+	1   & interruptor		\\\hline
+	---	& Resistencias variadas \\\hline
+	--- & Cables		\\\hline
+\end{tabular}
+\end{center}
+
+\section{Requerimientos}
+
+Para la conclusión satisfactoria de este laboratorio se deberán cumplir con los siguientes requerimientos:
+
+\begin{itemize}
+	\item Conectar correctamente al menos 5 leds.
+	\item Conectar correctamente un interruptor.
+	\item Leer datos enviados por el puerto serial.
+    \item Crear un programa que manipule el estado de leds conectados al sistema de acuerdo con el dato leído del puerto serial.
+    \item Leer el interruptor y poner los leds en el estado inicial cuando el mismo se presiona.
+\end{itemize}
+
+\section{Procedimiento}
+
+
+\subsection{Preparación}
+
+\begin{enumerate}
+	\item Se deberá realizar el diseño de un circuito, indicando los números de pines a utilizar en la tarjeta y la forma de conexión del resto de los componentes. Este diseño se deberá realizar en papel y ser mostrado al profesor antes de ser alambrado.
+
+\end{enumerate}
+
+\subsection{Alambrado del circuito}
+
+\begin{enumerate}[resume]
+	\item El circuito se deberá alambrar usando protoboards u otros dispositivos de prototipo apropiados. El alambrado deberá mantenerse ordenado en la medida de lo posible.
+\end{enumerate}
+
+\subsection{Programación}
+
+\begin{enumerate}[resume]
+	\item Se deberá escribir el programa en la interfaz de Arduino. Se sugiere implementar cada uno de los requerimientos definidos anteriormente de forma individual. De esta forma se aumentando progresivamente la complejidad del programa.
+\end{enumerate}
+
+\subsection{Verificación}
+
+\begin{enumerate}[resume]
+	\item Cuando se haya logrado completar uno o más requerimientos, el funcionamiento parcial deberá ser mostrado al profesor.
+	\item Cuando se haya concluido con todos los requerimientos, se deberá realizar una última demostración al profesor y se concluirá la práctica.
+\end{enumerate}
+
+
+\section{Informe}
+
+El informe que se deberá presentar constará de las siguientes partes:
+
+\begin{enumerate}
+  \item Encabezado
+  \item Resumen o abstract
+  \item Descripción del circuito
+  \item Listado de materiales
+  \item Esquemático o diagrama del circuito
+  \item Descripción del programa realizado
+  \item Conceptos aprendidos
+\end{enumerate}
+
+El informe deberá realizarse utilizando el sistema de preparación de documentos \LaTeX, utilizando el formato IEEEtran. El documento deberá ser entregado en forma impresa en la clase correspondiente y en forma digital en el Aula Virtual, incluyendo el código fuente y el resultado en PDF.  La fecha de entrega será una semana natural después de la realización de la práctica.
+
+La lista de componentes deberá incluir los circuitos integrados y elementos activos utilizados en la práctica con sus números de parte detallados, la cantidad y valor de los elementos pasivos utilizados y cualquier otro elemento eléctrico utilizado en el circuito. No se deberán incluir cables, bases para circuitos integrados, protoboards, etc.
+
+Para realizar el esquemático del circuito, se deberá utilizar una herramienta apropiada. Utilice símbolos apropiados para un esquemático. No son admisibles diagramas realizados en Microsoft Paint, Adobe Photoshop u otras herramientas similares. Se sugiere utilizar Fritzing.
+
+Para presentar la descripción del programa, se deberá hacer una explicación de cómo funciona el programa. Se podrá ilustrar esta sección con recortes del programa. Los recortes del listado del programa se deberán presentar utilizando el ambiente \texttt{verbatim}, y con las tabulaciones correctas. 
+
+Los conceptos aprendidos deberán ser una lista de notas importantes que se hayan recogido durante la clase y de los conceptos que se aplicaron en la práctica. Deberá realizarse una breve explicación de cada elemento en la lista.
+
+Se castigará duramente el intento de plagio.
+\newpage
+\section{Evaluación}
+
+La evaluación de este práctica será con una calificación de 0 a 100, distribuida de la siguiente forma:
+
+\begin{center}
+ \begin{tabular}{p{0.35\textwidth}|c}\hline
+   Funcionamiento del circuito (de acuerdo a los requisitos indicados anteriormente) 					     & 30\% \\\hline
+   Calidad del informe	  				& 10\% \\\hline
+   Esquemático							& 15\% \\\hline
+   Listado del programa					& 15\% \\\hline
+   Conceptos Aprendidos					& 20\% \\\hline
+   Encabezado, componentes, descripción & 10\% \\\hline\hline
+   Total								& 100\% \\
+ \end{tabular}
+\end{center}
+
+La sección ``calidad del informe'' corresponde a 10 puntos que podrán obtenerse en caso de que el informe esté escrito con correcta redacción y ortografía y esté presentado de forma correcta.
+
+Este documento puede usarse como base para el informe, pero en el mismo deberán incluirse solamente las secciones especificadas anteriormente y nada más.
+
+Si por motivos justificados se requiere de más tiempo para completar el informe, esta deberá ser solicitada al profesor al menos con 24 horas de anticipación.
+
+En caso de no haber solicitado una extensión por anticipado o de haberse vencido la extensión, la máxima nota estará dada por la fórmula:
+
+\[ M(n) = 100-\frac{1.367}{10}\cdot n^{1.367} \]
+
+donde $M$ es la nota máxima y $n$ es la cantidad de horas de atraso en la entrega. La nota final será:
+
+\[ F(n) = M(n)\cdot T \]
+
+donde $T$ corresponde al porcentaje obtenido de los rubros especificados anteriormente.
+
+\end{document} 

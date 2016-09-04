@@ -1,0 +1,147 @@
+\documentclass[12pt,letterpaper]{IEEEtran}
+\usepackage[utf8x]{inputenc}
+\usepackage[spanish]{babel}
+\usepackage{enumitem}
+
+\newcommand{\nombreproyecto}{LCD y máquinas de estados}
+
+
+\title{Laboratorio 2, parte b: \nombreproyecto}
+\author{Prof. Ing. Jorge Rivera G.}
+\date{\today}
+
+\newcommand\MYhyperrefoptions{bookmarks=true,bookmarksnumbered=true,
+pdfpagemode={UseOutlines},plainpages=false,pdfpagelabels=true,
+colorlinks=true,linkcolor={black},citecolor={black},
+urlcolor={black}}
+
+\usepackage[\MYhyperrefoptions]{hyperref}
+
+\begin{document}
+\hypersetup{pdftitle={Laboratorio 2 parte b: \nombreproyecto},
+pdfsubject={IEC-650 Laboratorio de Sistemas Digitales},
+pdfauthor={Ing. Jorge Rivera},
+pdfkeywords={arduino, sistemas digitales}}
+
+\renewcommand{\leftmark}{UNIVERSIDAD LATINA DE COSTA RICA -- IEC-650 LABORATORIO DE SISTEMAS DIGITALES}
+
+\maketitle
+
+
+\begin{abstract}
+Esta es la segunda etapa de una práctica donde se utilizará un arduino y un LCD para mostrar una serie de mensajes que se seleccionarán desde la consola serial.
+\end{abstract}
+
+\section{Descripción}
+
+Esta práctica será realizada enteramente en el laboratorio. Cada estudiante realizará un pequeño circuito utilizando una tarjeta Arduino.
+
+\section{Materiales}
+
+Para esta práctica se necesitarán los siguientes materiales.
+
+\begin{center}
+\begin{tabular}{c|c}\hline
+	Cant. & \hspace{2cm}Material\hspace{2cm} \\\hline\hline
+	1 	& Arduino o tarjeta similar		\\\hline
+    1 	& LCD Sparkfun ADM1602K o similar \\\hline
+	1	& Computadora con puerto USB  	\\\hline	
+\end{tabular}
+\end{center}
+
+\section{Requerimientos}
+
+Para la conclusión satisfactoria de la primera parte de este laboratorio se deberán cumplir con los siguientes requerimientos:
+
+\begin{enumerate}
+	\item Conectar correctamente el LCD al arduino.
+	\item Conectar correctamente un potenciómetro a un pin analógico del Arduino.
+	\item Leer el valor del voltaje en el potenciómetro.\label{lectanalog}
+	\item Crear un listado de 10 mensajes que se van a escribir en la pantalla de LCD.
+	\item Recibir un dato por el puerto serial.
+	\item De acuerdo con el dato recibido, seleccionar uno de los mensajes y mostrarlo en la pantalla LCD.
+	\item En al menos uno de los mensajes, se deberá mostrar el valor leído en el punto~\ref{lectanalog}.
+	\item Utilizar una máquina de estados para controlar navegar un menú.
+	\item Conectar dos leds al sistema, hacerlos parpadear utilizando una máquina de estados.
+	\item Recibir datos por el puerto serial que seleccionen opciones. 
+\end{enumerate}
+
+\section{Procedimiento}
+
+
+\subsection{Preparación}
+
+\begin{enumerate}
+	\item Se deberá realizar la lista de los mensajes que se van a utilizar.
+\end{enumerate}
+
+
+\subsection{Programación}
+
+\begin{enumerate}[resume]
+    \item Se deberá escribir un programa sencillo que solamente muestre un mensaje en el LCD. Utilice los tutoriales de Sparkfun y Arduino para verificar la conexión correcta del LCD y de la programación. \textbf{Se deberá mostrar este funcionamiento al profesor e incluirlo en el informe.}
+    \item Se deberá escribir el programa que realice el funcionamiento de los menús incluyendo la escritura de los mensajes en el LCD. \textbf{Este prorama también deberá incluirse en el informe.}
+\end{enumerate}
+
+\subsection{Verificación}
+
+\begin{enumerate}[resume]
+	\item Cuando se haya logrado completar uno o más requerimientos, el funcionamiento parcial deberá ser mostrado al profesor.
+	\item Cuando se haya concluido con todos los requerimientos, se deberá realizar una última demostración al profesor y se concluirá la práctica.
+\end{enumerate}
+
+
+\section{Informe}
+
+\begin{enumerate}
+  \item Encabezado
+  \item Resumen o abstract
+  \item Descripción del circuito
+  \item Listado de materiales
+  \item Descripción del programa
+  \item Conceptos aprendidos
+\end{enumerate}
+
+El informe deberá realizarse utilizando el sistema de preparación de documentos \LaTeX, utilizando el formato IEEEtran. El documento deberá ser entregado en forma impresa en la clase correspondiente y en forma digital en el Aula Virtual, incluyendo el código fuente y el resultado en PDF.  La fecha de entrega será una semana natural después de la realización de la práctica.
+
+La lista de componentes deberá incluir los circuitos integrados y elementos activos utilizados en la práctica con sus números de parte detallados, la cantidad y valor de los elementos pasivos utilizados y cualquier otro elemento eléctrico utilizado en el circuito. No se deberán incluir cables, bases para circuitos integrados, protoboards, etc.
+
+
+Para presentar la descripción del programa, se deberá hacer una explicación de cómo funciona el programa. Se podrá ilustrar esta sección con recortes del programa. Los recortes del listado del programa se deberán presentar utilizando el ambiente \texttt{verbatim}, y con las tabulaciones correctas. 
+
+Los conceptos aprendidos deberán ser una lista de notas importantes que se hayan recogido durante la clase. 
+
+Se castigará duramente el intento de plagio.
+
+\section{Evaluación}
+
+La evaluación de este práctica será con una calificación de 0 a 100, distribuida de la siguiente forma:
+
+\begin{center}
+ \begin{tabular}{p{0.35\textwidth}|c}\hline
+   Funcionamiento del circuito (de acuerdo a los requisitos indicados anteriormente) 					     & 35\% \\\hline
+   Descipción de los programas			& 25\% \\\hline
+   Conceptos Aprendidos					& 20\% \\\hline
+   Encabezado, componentes, descripción & 10\% \\\hline
+   Calidad del informe					& 10\% \\\hline\hline
+   Total								& 100\% \\
+ \end{tabular}
+\end{center}
+
+La calificación del rubro de funcionamiento del circuito es condicional a la entrega del informe correspondiente.
+
+De la sección de calidad del informe se sustraerán puntos en caso de que el informe tenga faltas ortográficas, gramaticales u otros errores de forma y presentación.
+
+Si por motivos justificados se requiere de más tiempo para completar el informe, esta deberá ser solicitada al profesor al menos con 24 horas de anticipación.
+
+En caso de no haber solicitado una extensión por anticipado o de haberse vencido la extensión, la máxima nota estará dada por la fórmula:
+
+\[ M(n) = 100-\frac{1.367}{10}\cdot n^{1.367} \]
+
+donde $M$ es la nota máxima y $n$ es la cantidad de horas de atraso en la entrega. La nota final será:
+
+\[ F(n) = M(n)\cdot T \]
+
+donde $T$ corresponde al porcentaje obtenido de los rubros especificados anteriormente.
+
+\end{document} 
